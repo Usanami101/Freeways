@@ -1,0 +1,237 @@
+from builtins import function
+from cProfile import label
+from tkinter import *
+
+import self as self
+
+
+class FreewayBuilder:
+    def __init__(self, master):
+        self.texas_menu = None
+        self.florida_menu = None
+        self.new_york_menu = None
+        self.california_menu = None
+        self.use_in_orlando = None
+        self.use_in_tampa = None
+        self.use_in_miami = None
+        self.use_in_rochester = None
+        self.use_in_new_york_city = None
+        self.use_in_san_diego = None
+        self.use_in_san_francisco = None
+        self.use_in_los_angeles = None
+        self.use_in_indiana = None
+        self.use_in_illinois = None
+        self.use_in_michigan = None
+        self.master = master
+        master.title("Building Freeways in Odd Places")
+
+        # Create a label for the title
+        self.title_label = Label(master, text="Building Freeways in Odd Places")
+        self.title_label.pack()
+
+        # Create labels for each of the freeway building options
+        self.option1_label = Label(master, text="Option 1: Tunnel through mountains")
+        self.option2_label = Label(master, text="Option 2: Build on stilts over bodies of water")
+        self.option3_label = Label(master, text="Option 3: Elevate the roadway on pillars")
+        self.option4_label = Label(master, text="Option 4: Cut through densely populated areas using viaducts")
+
+        # Pack the labels
+        self.option1_label.pack()
+        self.option2_label.pack()
+        self.option3_label.pack()
+        self.option4_label.pack()
+
+        # Create a main menu
+        self.main_menu = Menu(master)
+        master.config(menu=self.main_menu)
+
+        # Create a submenu for US states
+        self.state_menu = Menu(self.main_menu)
+        self.main_menu.add_cascade(label="US States", menu=self.state_menu)
+        self.state_menu.add_command(label="California", command=self.use_in_california)
+        self.state_menu.add_command(label="New York", command=self.use_in_new_york)
+        self.state_menu.add_command(label="Florida", command=self.use_in_florida)
+        self.state_menu.add_command(label="Texas", command=self.use_in_texas)
+        self.state_menu.add_command(label="Michigan", command=self.use_in_michigan)
+
+        self.state_menu.add_command(label="Illinois", command=self.use_in_illinois)
+        self.state_menu.add_command(label="Indiana", command=self.use_in_indiana)
+
+    def use_in_california(self):
+        # Create a submenu for California cities
+        self.california_menu = Menu(self.state_menu)
+        self.state_menu.add_cascade(label="Cities", menu=self.california_menu)
+        self.california_menu.add_command(label="Los Angeles", command=self.use_in_los_angeles)
+        self.california_menu.add_command(label="San Francisco", command=self.use_in_san_francisco)
+        self.california_menu.add_command(label="San Diego", command=self.use_in_san_diego)
+
+    def use_in_new_york(self):
+        # Create a submenu for New York cities
+        self.new_york_menu = Menu(self.state_menu)
+        self.state_menu.add_cascade(label="Cities", menu=self.new_york_menu)
+        self.new_york_menu.add_command(label="New York City", command=self.use_in_new_york_city).add_command(
+            label="Rochester", command=self.use_in_rochester)
+
+    def use_in_florida(self):
+        # Create a submenu for Florida cities
+        self.florida_menu = Menu(self.state_menu)
+        self.state_menu.add_cascade(label="Cities", menu=self.florida_menu, underline=0)
+        self.florida_menu.add_command(label="Miami", command=self.use_in_miami)
+        self.florida_menu.add_command(label="Tampa", command=self.use_in_tampa)
+        self.florida_menu.add_command(label="Orlando", command=self.use_in_orlando)
+
+    def use_in_texas(self):
+        # Create a submenu for Texas cities
+        self.texas_menu = Menu(self.state_menu)
+        self.state_menu.add_cascade()
+
+
+def some_function():
+# function body
+self.texas_menu.add_command(label="Dallas", command=self.use_in_dallas)
+self.texas_menu.add_command(label="Austin", command=self.use_in_austin)
+
+
+def use_in_michigan(self):
+    # Create a submenu for Michigan cities
+    self.michigan_menu = Menu(self.state_menu)
+    self.state_menu.add_cascade(label="Cities", menu=self.michigan_menu, underline=0)
+    self.michigan_menu.add_command(label="Detroit", command=self.use_in_detroit)
+    self.michigan_menu.add_command(label="Grand Rapids", command=self.use_in_grand_rapids)
+    self.michigan_menu.add_command(label="Lansing", command=self.use_in_lansing)
+
+
+def use_in_illinois(self):
+    # Create a submenu for Illinois cities
+    self.illinois_menu = Menu(self.state_menu)
+    self.state_menu.add_cascade(label="Cities", menu=self.illinois_menu, underline=0)
+    self.illinois_menu.add_command(label="Chicago", command=self.use_in_chicago)
+    self.illinois_menu.add_command(label="Peoria", command=self.use_in_peoria)
+    self.illinois_menu.add_command(label="Rockford")
+
+
+def use_in_indiana(self):
+    # Create a submenu for Indiana cities
+    self.indiana_menu = Menu(self.state_menu)
+    self.state_menu.add_cascade(label="Cities", menu=self.indiana_menu, underline=0)
+    self.indiana_menu.add_command(label="Indianapolis", command=self.use_in_indianapolis)
+    self.indiana_menu.add_command(label="Fort Wayne", command=self.use_in_fort_wayne)
+    self.indiana_menu.add_command(label="Evansville", command=self.use_in_evansville)
+
+
+def use_in_los_angeles(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Los Angeles.")
+
+
+def use_in_san_francisco(self):
+    print("Option 2 could be used to build a freeway over the San Francisco Bay.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_san_diego(self):
+    print("Option 2 could be used to build a freeway over the San Diego Bay")
+
+
+
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_new_york_city(self):
+    print("Option 1 could be used to build a tunnel under the Hudson River.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Manhattan.")
+
+
+def use_in_buffalo(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Buffalo.")
+
+
+def use_in_rochester(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Rochester.")
+
+
+def use_in_miami(self):
+    print("Option 2 could be used to build a freeway over the Miami River.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_tampa(self):
+    print("Option 2 could be used to build a freeway over the Tampa Bay.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_orlando(self):
+    print("Option 2 could be used to build a freeway over one of the many lakes in the area.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_houston(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Houston.")
+
+
+def use_in_dallas(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Dallas.")
+
+
+def use_in_austin(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Austin.")
+
+
+def use_in_detroit(self):
+    print("Option 2 could be used to build a freeway over the Detroit River.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_grand_rapids(self):
+    print("Option 2 could be used to build a freeway over the Grand River.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_lansing(self):
+    print("Option 2 could be used to build a freeway over the Grand River.")
+    print("Option 4 could be used to cut through the densely populated areas of the city center.")
+
+
+def use_in_chicago(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Chicago.")
+
+
+def use_in_peoria():
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print()
+
+
+"Option 3 could be used to elevate the roadway above the crowded streets of Peoria."
+
+
+
+
+def use_in_rockford():
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Rockford.")
+
+
+def use_in_indianapolis():
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Indianapolis.")
+
+
+def use_in_fort_wayne(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Fort Wayne.")
+
+
+def use_in_evansville(self):
+    print("Option 1 could be used to build a tunnel through the mountains surrounding the city.")
+    print("Option 3 could be used to elevate the roadway above the crowded streets of Evansville.")
+
+
+root = Tk()
+my_gui = FreewayBuilder(root)
+root.mainloop()
